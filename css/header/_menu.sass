@@ -1,0 +1,82 @@
+.menu
+  font-family: 'Lato', sans-serif
+  flex: 1
+  text-align: right
+  margin-top: 15px
+  font-size: 14px
+
+  &__mobile-icon
+    display: none
+
+  &__item
+    color: $colour-gray
+    margin: 0 10px
+    position: relative
+    cursor: pointer
+
+    @media(min-width: 850px)
+      &:after
+        content: ''
+        position: absolute
+        right: 0
+        left: 0
+        bottom: 0px
+        height: 0px
+        background: red
+        transition: height .1s, bottom .1s
+
+      &:hover::after
+        height: 2px
+        bottom: -5px
+
+      &--mobile
+        display: none
+
+// header mobile
+@media(max-width: 850px)
+  .logo
+    width: 100%
+    text-align: center
+
+  .menu
+    display: flex
+    text-align: left
+    position: absolute
+    margin: 0
+    left: -999px
+    top: 0
+    bottom: 0
+    box-shadow: 0px 0px 5px 0px $colour-gray
+    flex-direction: column
+    transition: left .2s
+    background: white
+
+    &__mobile-icon
+      display: block
+
+    &__item
+      padding: 10px
+      margin: 0
+
+      &--mobile-number, &--icon
+        display: inline-block
+
+      &--icon
+        border: 1px solid
+        border-radius: 50%
+        color: $colour-gray
+        text-align: center
+        padding: 5px
+        width: 20px
+        margin-right: 5px
+
+    &__mobile-icon
+      font-size: 24px
+      padding: 0 10px
+
+// toggle checkbox for mobile menu
+input#toggle-mobile-menu
+  display: none
+
+#toggle-mobile-menu:checked ~ nav
+  left: 0

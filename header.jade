@@ -1,0 +1,28 @@
+header
+  input#toggle-mobile-menu(type='checkbox')
+  
+  label.menu__mobile-icon(for='toggle-mobile-menu')
+    i.fa.fa-bars
+  
+  div.logo
+    img(src='img/logo.png')
+  
+  nav.menu
+    label.menu__mobile-icon(for='toggle-mobile-menu')
+      i.fa.fa-times
+      
+    a.menu__item(href'#') Products
+    a.menu__item(href'#') Anti-Wrinkle Treatment
+    a.menu__item(href'#') Treatments
+    a.menu__item(href'#') Semi-permanent Cosmetics
+    a.menu__item(href'#') Contact Us
+    
+    div.menu__item.menu__item--mobile
+      i.fa.fa-phone.menu__item--icon
+      a(href='tel:01923828205') 01923828205
+      
+    div.menu__item.menu__item--mobile
+      a(href='#').menu__item--icon
+        i.fa.fa-facebook
+      a(href='#').menu__item--icon
+        i.fa.fa-twitter
