@@ -1,1 +1,0 @@
-# ritz-laser-clinic-website
