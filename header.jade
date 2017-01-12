@@ -3,10 +3,8 @@ div.top
    i(style='margin:0;padding-right:0;').fa.fa-phone.social__icon
    a.social__icon(href='tel: 01923828205')  01923 828205
  div.menu__item.menu__item--mobile(style='display: flex;justify-content: center;')
-   a(href='#').social__icon
+   a(href='https://www.facebook.com/Ritz-Laser-Clinic-394910267297422/').social__icon
      i.fa.fa-facebook
-   a(href='#').social__icon
-     i.fa.fa-twitter
 header
   input#toggle-mobile-menu(type='checkbox')
   
@@ -17,37 +15,36 @@ header
     a(href='/')
       img(src='img/logo2.png')
   
-  nav.menu
+  ul.menu
     label.menu__mobile-icon(for='toggle-mobile-menu')
       i.fa.fa-times
         
-    a.menu__item.menu__item-sub(href='products') Products
+    li.menu__item.menu__item-sub Products
       ul.sub-menu
-        li.sub-menu__item Cleanse
-        li.sub-menu__item Protect
-        li.sub-menu__item Repair
-        li.sub-menu__item Hydrate
-        li.sub-menu__item Sensitive
-        li.sub-menu__item Acne
-        li.sub-menu__item Brighten
-        li.sub-menu__item Body
+        li.sub-menu__item 
+          a(href='products') All Products
     
-    
-    a.menu__item(href='laser-treatment') Laser Treatment
-    a.menu__item(href'#') Facials
-    a.menu__item.menu__item-sub(href'#') Other Treatments
+    li.menu__item 
+      a(href='laser-treatment') Laser Treatment
+  
+    li.menu__item.menu__item-sub(href'#') Other Treatments
       ul.sub-menu
-        li.sub-menu__item Waxing &amp; Threading
-        li.sub-menu__item Eyes
-        li.sub-menu__item Electrolysis &amp; Advance Electrolysis
-        li.sub-menu__item Red Blue Light Therapy
+        li.sub-menu__item 
+          a(href='waxing') Waxing &amp; Threading
+        li.sub-menu__item
+          a(href='eyes') Eyes
+        li.sub-menu__item 
+          a(href='electrolysis') Electrolysis &amp; Advance Electrolysis
+        li.sub-menu__item 
+          a(href='red-blue-light-therapy') Red Blue Light Therapy
+    
+    li.menu__item
+      a(href='facials') Facials
     
     div.menu__item.menu__item--mobile
       i.fa.fa-phone.menu__item--icon
       a(href='tel: 01923 828205')  01923s828205
 
     div.menu__item.menu__item--mobile
-      a(href='#').menu__item--icon
+      a(href='https://www.facebook.com/Ritz-Laser-Clinic-394910267297422/').menu__item--icon
         i.fa.fa-facebook
-      a(href='#').menu__item--icon
-        i.fa.fa-twitter

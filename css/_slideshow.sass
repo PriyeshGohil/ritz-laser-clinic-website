@@ -12,7 +12,7 @@
   width: 1100px
   height: 350px
   justify-content: space-between
-  box-shadow: 0 0 5px #ccc
+  // box-shadow: 0 0 5px #ccc
 
   &__title
     text-align: center
@@ -84,7 +84,7 @@
 
 .section-wrapper
   display: flex
-  // flex-wrap: wrap
+  flex-wrap: wrap
   max-width: 1180px
   margin: 10px auto
   justify-content: space-between
@@ -92,6 +92,9 @@
 .section
   padding: 5px
   flex: 1
+  @media(max-width: 630px)
+    flex: auto
+    width: 100%
 
   &__heading
     position: relative
@@ -153,6 +156,7 @@
     width: calc(100% + 50px)
     transition: opacity 0.35s, transform 0.35s
     transform: translate3d(-40px,0,0)
+    height: 100%
 
   figcaption
     position: absolute
@@ -215,6 +219,14 @@
   top: 0px
   padding: 10px
   color: white
+
+  &__link
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
 
 .popular__heading
   font-size: 21px

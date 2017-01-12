@@ -14,6 +14,11 @@
     position: relative
     cursor: pointer
     text-decoration: none
+    display: inline-block
+
+    a
+      text-decoration: none
+      color: black
 
     @media(min-width: 770px)
       &-sub:after
@@ -34,10 +39,23 @@
         height: 1px
         bottom: -1px
 
+      &-sub:hover::before
+        content: ''
+        height: 8px
+        width: 100%
+        position: absolute
+        background: white
+        right: 0px
+        left: -1px
+        border-right: 1px solid #ddd
+        border-left: 1px solid #ddd
+        bottom: -6px
+        z-index: 2
+
       &-sub:hover
         border-right: 1px solid #dddddd
         border-left: 1px solid #dddddd
-        padding-bottom: 5px
+        // padding-bottom: 5px
 
       &-sub:hover > .sub-menu
         display: block
@@ -88,6 +106,6 @@
 input#toggle-mobile-menu
   display: none
 
-#toggle-mobile-menu:checked ~ nav
+#toggle-mobile-menu:checked ~ ul
   left: 0
   z-index: 1
