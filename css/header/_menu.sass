@@ -10,34 +10,40 @@
 
   &__item
     color: $colour-gray
-    margin: 0 10px
+    padding: 0 10px
     position: relative
     cursor: pointer
+    text-decoration: none
 
-    @media(min-width: 850px)
-      &:after
+    @media(min-width: 770px)
+      &-sub:after
         content: ''
         position: absolute
         right: 0
         left: 0
         bottom: 0px
         height: 0px
-        background: red
-        transition: height .1s, bottom .1s
-
-      &:hover::after
-        height: 2px
-        bottom: -5px
+        background: white
+        z-index: 1
 
       &--mobile
         display: none
 
-// header mobile
-@media(max-width: 850px)
-  .logo
-    width: 100%
-    text-align: center
+      // submenu only
+      &-sub:hover::after
+        height: 1px
+        bottom: -1px
 
+      &-sub:hover
+        border-right: 1px solid #dddddd
+        border-left: 1px solid #dddddd
+        padding-bottom: 5px
+
+      &-sub:hover > .sub-menu
+        display: block
+
+// header mobile
+@media(max-width: 770px)
   .menu
     display: flex
     text-align: left
@@ -45,11 +51,11 @@
     margin: 0
     left: -999px
     top: 0
-    bottom: 0
     box-shadow: 0px 0px 5px 0px $colour-gray
     flex-direction: column
     transition: left .2s
     background: white
+    z-index: 2
 
     &__mobile-icon
       display: block
@@ -69,10 +75,14 @@
         padding: 5px
         width: 20px
         margin-right: 5px
+        &:hover
+          background: #dddddd
+          color: white
 
     &__mobile-icon
       font-size: 24px
       padding: 0 10px
+      padding-right: 0
 
 // toggle checkbox for mobile menu
 input#toggle-mobile-menu
@@ -80,3 +90,4 @@ input#toggle-mobile-menu
 
 #toggle-mobile-menu:checked ~ nav
   left: 0
+  z-index: 1

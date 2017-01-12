@@ -1,3 +1,12 @@
+div.top
+ div
+   i(style='margin:0;padding-right:0;').fa.fa-phone.social__icon
+   a.social__icon(href='tel: 01923828205')  01923 828205
+ div.menu__item.menu__item--mobile(style='display: flex;justify-content: center;')
+   a(href='#').social__icon
+     i.fa.fa-facebook
+   a(href='#').social__icon
+     i.fa.fa-twitter
 header
   input#toggle-mobile-menu(type='checkbox')
   
@@ -5,22 +14,38 @@ header
     i.fa.fa-bars
   
   div.logo
-    img(src='img/logo.png')
+    a(href='/')
+      img(src='img/logo2.png')
   
   nav.menu
     label.menu__mobile-icon(for='toggle-mobile-menu')
       i.fa.fa-times
-      
-    a.menu__item(href'#') Products
-    a.menu__item(href'#') Anti-Wrinkle Treatment
-    a.menu__item(href'#') Treatments
-    a.menu__item(href'#') Semi-permanent Cosmetics
-    a.menu__item(href'#') Contact Us
+        
+    a.menu__item.menu__item-sub(href='products') Products
+      ul.sub-menu
+        li.sub-menu__item Cleanse
+        li.sub-menu__item Protect
+        li.sub-menu__item Repair
+        li.sub-menu__item Hydrate
+        li.sub-menu__item Sensitive
+        li.sub-menu__item Acne
+        li.sub-menu__item Brighten
+        li.sub-menu__item Body
+    
+    
+    a.menu__item(href='laser-treatment') Laser Treatment
+    a.menu__item(href'#') Facials
+    a.menu__item.menu__item-sub(href'#') Other Treatments
+      ul.sub-menu
+        li.sub-menu__item Waxing &amp; Threading
+        li.sub-menu__item Eyes
+        li.sub-menu__item Electrolysis &amp; Advance Electrolysis
+        li.sub-menu__item Red Blue Light Therapy
     
     div.menu__item.menu__item--mobile
       i.fa.fa-phone.menu__item--icon
-      a(href='tel:01923828205') 01923828205
-      
+      a(href='tel: 01923 828205')  01923s828205
+
     div.menu__item.menu__item--mobile
       a(href='#').menu__item--icon
         i.fa.fa-facebook

@@ -1,0 +1,23 @@
+.products-wrapper
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+.product
+  flex-basis: 25%
+  text-align: center
+  border: 1px solid #dddddd
+  margin: 10px
+  box-shadow: 1px 2px 5px #dddddd
+  @media(max-width: 650px)
+    flex-basis: auto
+    width: 200px
+  @media(max-width: 420px)
+    width: 100%
+    
+  &__img
+    max-width: 100px
+
+  &__info
+    padding: 0 5px
+    font-size: 14px
